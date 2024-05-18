@@ -1,0 +1,17 @@
+#/remove-book -> remove book
+@app.delete("/remove-book")
+async def remove_book(book:str):
+    if book in BOOK_DATABASE:
+        json_book = jsonable_encoder(book)
+        BOOK_DATABASE.remove(json_book)
+        return {"book": "Book was removed from the Bookstore"}
+    else:
+        raise HTTPException(404, "Book not found")
+
+#/remove-book-by-id -> remove book by id
+@app.delete("/remove-book-by-id/{book_id}")
+async def remove_book_by_id(book_id: int):
+    if book_id < 0 or book_id >= len(BOOK_DATABASE):
+        raise HTTPException(404, "Id is out of range")
+    BOOK_DATABASE.pop(book_id)
+    return {"book": "Book was removed from the Bookstore"}
