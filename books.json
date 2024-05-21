@@ -5,5 +5,19 @@
         "genre": "fiction",
         "price": 2.0,
         "book_id": "0ab73ed556b04d8494356e123c2fcdd8"
+    },
+    {
+        "title": "Livro 1.1",
+        "author": "Lea Sampaio",
+        "genre": "fiction",
+        "price": 0.0,
+        "book_id": "3bdba4ff3d7a43ff82305026f1963606"
+    },
+    {
+        "title": "Livro 2",
+        "author": "Paulo",
+        "genre": "non-fiction",
+        "price": 0.0,
+        "book_id": "283f2aa914234606a1d595302e05717c"
     }
 ]

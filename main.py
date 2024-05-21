@@ -102,3 +102,9 @@ async def update_book_price(book_id: str, price: float):
                 json.dump(BOOK_DATABASE, f, indent=4)
                 return {"message": "Book was updated"}
     raise HTTPException(404, "Book not found")
+
+#/list-book-by-genre/{genre} -> list book by genre
+@app.get("/list-book-by-genre/{genre}")
+async def list_book_by_genre(genre: str):
+    books_by_genre = [book for book in BOOK_DATABASE if book["genre"] == genre]
+    return {"books": books_by_genre}
