@@ -1,23 +1,16 @@
 [
     {
-        "title": "string2",
-        "author": "string",
+        "title": "Sample Book",
+        "author": "Author Name",
         "genre": "fiction",
-        "price": 2.0,
-        "book_id": "0ab73ed556b04d8494356e123c2fcdd8"
+        "price": 19.99,
+        "book_id": "c3afb333b65d43cfb70bf0588cbccfde"
     },
     {
-        "title": "Livro 1.1",
-        "author": "Lea Sampaio",
-        "genre": "fiction",
-        "price": 0.0,
-        "book_id": "3bdba4ff3d7a43ff82305026f1963606"
-    },
-    {
-        "title": "Livro 2",
-        "author": "Paulo",
+        "title": "Another Book",
+        "author": "Another Name",
         "genre": "non-fiction",
-        "price": 0.0,
-        "book_id": "283f2aa914234606a1d595302e05717c"
+        "price": 29.99,
+        "book_id": "90ebc56780194789b0d39ab1a605659b"
     }
 ]
