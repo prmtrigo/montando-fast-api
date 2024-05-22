@@ -1,16 +1,16 @@
 [
     {
-        "title": "Sample Book",
-        "author": "Author Name",
+        "title": "Sample Book 1",
+        "author": "Author One",
         "genre": "fiction",
         "price": 19.99,
-        "book_id": "c3afb333b65d43cfb70bf0588cbccfde"
+        "book_id": "b9a0a99fcfba4f2887b1ff4e16ab1396"
     },
     {
-        "title": "Another Book",
-        "author": "Another Name",
+        "title": "Sample Book 2",
+        "author": "Author Two",
         "genre": "non-fiction",
         "price": 29.99,
-        "book_id": "90ebc56780194789b0d39ab1a605659b"
+        "book_id": "37a3657f482840ddaf668440d805d728"
     }
 ]
