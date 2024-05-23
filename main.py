@@ -108,3 +108,8 @@ async def update_book_price(book_id: str, price: float):
 async def list_book_by_genre(genre: str):
     books_by_genre = [book for book in BOOK_DATABASE if book["genre"] == genre]
     return {"books": books_by_genre}
+
+@app.get ("/list-book-by-author")
+async def list_book_by_author(author: str):
+    books_by_author = [book for book in BOOK_DATABASE if book["author"] == author]
+    return {"books": books_by_author}

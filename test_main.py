@@ -181,3 +181,52 @@ def test_random_book_with_books():
     assert "book" in response.json()
     book = response.json()["book"]
     assert book in BOOK_DATABASE
+
+def test_list_book_by_author():
+    book1 = {
+        "title": "Sample Book 1",
+        "author": "Author One",
+        "genre": "fiction",
+        "price": 19.99
+    }
+    book2 = {
+        "title": "Sample Book 2",
+        "author": "Author Two",
+        "genre": "non-fiction",
+        "price": 29.99
+    }
+    book3 = {
+        "title": "Sample Book 3",
+        "author": "Author One",
+        "genre": "fiction",
+        "price": 15.99
+    }
+
+    response = client.post("/add-book", json=book1)
+    assert response.status_code == 200
+    assert response.json() == {"message": "New Book was added to the Bookstore"}
+
+    response = client.post("/add-book", json=book2)
+    assert response.status_code == 200
+    assert response.json() == {"message": "New Book was added to the Bookstore"}
+
+    response = client.post("/add-book", json=book3)
+    assert response.status_code == 200
+    assert response.json() == {"message": "New Book was added to the Bookstore"}
+
+    response = client.get("/list-book-by-author?author=Author One")
+    assert response.status_code == 200
+    books_by_author_one = response.json()["books"]
+    assert len(books_by_author_one) == 2
+    assert books_by_author_one[0]["title"] == "Sample Book 1"
+    assert books_by_author_one[1]["title"] == "Sample Book 3"
+
+    response = client.get("/list-book-by-author?author=Author Two")
+    assert response.status_code == 200
+    books_by_author_two = response.json()["books"]
+    assert len(books_by_author_two) == 1
+    assert books_by_author_two[0]["title"] == "Sample Book 2"
+
+    response = client.get("/list-book-by-author?author=Author Three")
+    assert response.status_code == 200
+    assert len(response.json()["books"]) == 0

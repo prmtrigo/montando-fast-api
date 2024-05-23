@@ -4,13 +4,20 @@
         "author": "Author One",
         "genre": "fiction",
         "price": 19.99,
-        "book_id": "b9a0a99fcfba4f2887b1ff4e16ab1396"
+        "book_id": "d5defc7f5f6e421492667c5a85e9d2ee"
     },
     {
         "title": "Sample Book 2",
         "author": "Author Two",
         "genre": "non-fiction",
         "price": 29.99,
-        "book_id": "37a3657f482840ddaf668440d805d728"
+        "book_id": "2012f7e6570a44d6b8710567d0804aef"
+    },
+    {
+        "title": "Sample Book 3",
+        "author": "Author One",
+        "genre": "fiction",
+        "price": 15.99,
+        "book_id": "0b13a3e516a1414fbc48ec9cc45b70dd"
     }
 ]
